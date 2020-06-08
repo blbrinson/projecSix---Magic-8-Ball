@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,81 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="____Magic_Eight_Ball" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="equalSpacing" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="VYU-Id-EQv">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <view autoresizesSubviews="NO" contentMode="scaleAspectFit" semanticContentAttribute="forceLeftToRight" translatesAutoresizingMaskIntoConstraints="NO" id="f5m-Tl-d1H" userLabel="Ball">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="399.66666666666669"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="8 ball image" translatesAutoresizingMaskIntoConstraints="NO" id="adF-SZ-xpL">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="399.66666666666669"/>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="adF-SZ-xpL" firstAttribute="leading" secondItem="f5m-Tl-d1H" secondAttribute="leading" id="LIo-QI-4UO"/>
+                                            <constraint firstItem="adF-SZ-xpL" firstAttribute="top" secondItem="f5m-Tl-d1H" secondAttribute="top" id="M6h-vV-RDd"/>
+                                            <constraint firstAttribute="bottom" secondItem="adF-SZ-xpL" secondAttribute="bottom" id="nmG-5v-KpE"/>
+                                            <constraint firstAttribute="trailing" secondItem="adF-SZ-xpL" secondAttribute="trailing" id="zm2-af-ut3"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" translatesAutoresizingMaskIntoConstraints="NO" id="Zzs-En-dEU" userLabel="Button">
+                                        <rect key="frame" x="0.0" y="409.66666666666674" width="414" height="408.33333333333326"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WuQ-Pd-MC4">
+                                                <rect key="frame" x="49" y="220.66666666666669" width="316" height="57"/>
+                                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="40"/>
+                                                <size key="titleShadowOffset" width="3" height="6"/>
+                                                <state key="normal" title="Ask Me Anything">
+                                                    <color key="titleColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                    <color key="titleShadowColor" red="0.19665033019397588" green="0.076144079373941589" blue="0.30754128886010368" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="06P-RF-qTs"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="WuQ-Pd-MC4" firstAttribute="centerY" secondItem="Zzs-En-dEU" secondAttribute="centerY" constant="45" id="O2m-rf-P0X"/>
+                                            <constraint firstItem="WuQ-Pd-MC4" firstAttribute="centerX" secondItem="Zzs-En-dEU" secondAttribute="centerX" id="Sr0-D1-ge1"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Zzs-En-dEU" firstAttribute="trailing" secondItem="VYU-Id-EQv" secondAttribute="trailing" id="2Cb-8M-iFh"/>
+                                    <constraint firstItem="Zzs-En-dEU" firstAttribute="leading" secondItem="VYU-Id-EQv" secondAttribute="leading" id="DYA-L1-Uwy"/>
+                                    <constraint firstItem="f5m-Tl-d1H" firstAttribute="top" secondItem="VYU-Id-EQv" secondAttribute="top" id="Hfx-KI-7nL"/>
+                                    <constraint firstAttribute="trailing" secondItem="Zzs-En-dEU" secondAttribute="trailing" id="K1g-Dd-XaO"/>
+                                    <constraint firstItem="Zzs-En-dEU" firstAttribute="top" secondItem="f5m-Tl-d1H" secondAttribute="bottom" constant="10" id="eB7-7j-d8p"/>
+                                    <constraint firstAttribute="bottom" secondItem="Zzs-En-dEU" secondAttribute="bottom" id="fly-6o-y8f"/>
+                                    <constraint firstItem="f5m-Tl-d1H" firstAttribute="leading" secondItem="VYU-Id-EQv" secondAttribute="leading" id="pSu-Ze-DeW"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="VYU-Id-EQv" firstAttribute="leading" secondItem="Uee-0j-aNJ" secondAttribute="leading" id="4lS-zV-c0E"/>
+                            <constraint firstItem="Uee-0j-aNJ" firstAttribute="bottom" secondItem="VYU-Id-EQv" secondAttribute="bottom" id="LHW-OZ-BHO"/>
+                            <constraint firstItem="VYU-Id-EQv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="e75-nq-VZ2"/>
+                            <constraint firstItem="VYU-Id-EQv" firstAttribute="top" secondItem="Uee-0j-aNJ" secondAttribute="top" id="szb-9z-TQ6"/>
+                            <constraint firstItem="VYU-Id-EQv" firstAttribute="trailing" secondItem="Uee-0j-aNJ" secondAttribute="trailing" id="tIX-wd-jrh"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Uee-0j-aNJ"/>
                     </view>
+                    <connections>
+                        <outlet property="magicBall" destination="adF-SZ-xpL" id="nND-h2-y6U"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="49.553571428571423"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="8 ball image" width="358.66665649414062" height="358.66665649414062"/>
+    </resources>
 </document>

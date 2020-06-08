@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,13 +14,70 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="oai-Kf-n4N">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DnD-Mg-Px0" userLabel="magicBall">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="341.5"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="8 ball image" translatesAutoresizingMaskIntoConstraints="NO" id="AP5-re-KAS">
+                                                <rect key="frame" x="20" y="20" width="335" height="301.5"/>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="AP5-re-KAS" firstAttribute="top" secondItem="DnD-Mg-Px0" secondAttribute="top" constant="20" id="4gE-4y-Hv8"/>
+                                            <constraint firstItem="AP5-re-KAS" firstAttribute="leading" secondItem="DnD-Mg-Px0" secondAttribute="leading" constant="20" id="OWe-wF-KW9"/>
+                                            <constraint firstAttribute="bottom" secondItem="AP5-re-KAS" secondAttribute="bottom" constant="20" id="cRA-hx-ZFw"/>
+                                            <constraint firstAttribute="trailing" secondItem="AP5-re-KAS" secondAttribute="trailing" constant="20" id="daw-8M-wSg"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vwt-sU-azT" userLabel="Label">
+                                        <rect key="frame" x="0.0" y="351.5" width="375" height="315.5"/>
+                                        <subviews>
+                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="blbrinson: Magic 8 Ball" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="aSL-ws-fdg">
+                                                <rect key="frame" x="20" y="155.5" width="335" height="44.5"/>
+                                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="40"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="aSL-ws-fdg" firstAttribute="centerY" secondItem="Vwt-sU-azT" secondAttribute="centerY" constant="20" id="0vG-sb-hOT"/>
+                                            <constraint firstAttribute="trailing" secondItem="aSL-ws-fdg" secondAttribute="trailing" constant="20" id="NxB-9X-ruz"/>
+                                            <constraint firstItem="aSL-ws-fdg" firstAttribute="leading" secondItem="Vwt-sU-azT" secondAttribute="leading" constant="20" id="dKR-qL-2BA"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="DnD-Mg-Px0" firstAttribute="leading" secondItem="oai-Kf-n4N" secondAttribute="leading" id="4dx-2y-SVi"/>
+                                    <constraint firstItem="Vwt-sU-azT" firstAttribute="top" secondItem="DnD-Mg-Px0" secondAttribute="bottom" constant="10" id="BU2-9e-bHJ"/>
+                                    <constraint firstItem="DnD-Mg-Px0" firstAttribute="top" secondItem="oai-Kf-n4N" secondAttribute="top" id="FhS-hA-0SW"/>
+                                    <constraint firstItem="Vwt-sU-azT" firstAttribute="leading" secondItem="oai-Kf-n4N" secondAttribute="leading" id="O7O-Pu-dnc"/>
+                                    <constraint firstAttribute="bottom" secondItem="Vwt-sU-azT" secondAttribute="bottom" id="S3T-gu-U2O"/>
+                                    <constraint firstItem="Vwt-sU-azT" firstAttribute="top" secondItem="DnD-Mg-Px0" secondAttribute="bottom" constant="10" id="bvj-0x-Lrg"/>
+                                    <constraint firstAttribute="trailing" secondItem="Vwt-sU-azT" secondAttribute="trailing" id="r7D-l3-fzT"/>
+                                    <constraint firstAttribute="trailing" secondItem="DnD-Mg-Px0" secondAttribute="trailing" id="sLQ-Jr-STB"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="oai-Kf-n4N" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="1ET-n1-aks"/>
+                            <constraint firstItem="oai-Kf-n4N" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="aqe-J2-K5P"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="oai-Kf-n4N" secondAttribute="bottom" id="h1j-vV-ZeW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oai-Kf-n4N" secondAttribute="trailing" id="kPa-Ij-FpD"/>
+                            <constraint firstItem="oai-Kf-n4N" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="t5n-Tl-SMi"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="8 ball image" width="358.5" height="358.5"/>
+    </resources>
 </document>
